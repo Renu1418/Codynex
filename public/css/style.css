@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 80px;
+}
+
+/* ====================
+   NAVIGATION STRUCTURE
+==================== */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1em;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.nav-left .logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.nav-items li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3em 0.6em;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5em;
+}
+
+.auth-btn {
+    padding: 0.4em 0.8em;
+    background-color: white;
+    color: #0066ff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-btn:hover {
+    background-color: #0066ff;
+    color: white;
+}
+
+.auth-btn.signup {
+    background-color: #00c6ff;
+    color: white;
+}
+
+.auth-btn.signup:hover {
+    background-color: #0099cc;
+}
+
+/* ====================
+   MENU TOGGLE FOR MOBILE
+==================== */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* ====================
+   HERO, CONTENT, ETC.
+==================== */
+.hero {
+    padding: 4em 2em;
+    text-align: center;
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background-color: white;
+    color: #0066ff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content {
+    padding: 3em;
+    max-width: 900px;
+    margin: 3em auto 4em auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.content ul {
+    margin-top: 1em;
+    padding-left: 1.5em;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, textarea, button {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    color: black;
+    position: relative;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.job-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+.job h3 {
+    color: #0066ff;
+    margin-bottom: 0.5em;
+}
+
+.job p {
+    margin-left: 1.2em;
+    line-height: 1.6;
+}
+
+.service {
+    margin-bottom: 2.5em;
+}
+
+.service h3 {
+    margin-bottom: 0.5em;
+    color: #0066ff;
+}
+
+.service p {
+    margin-left: 1.2em;
+    line-height: 1.7;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5em;
+}
+
+.features, .why-us, .cta {
+    padding: 3em;
+    text-align: center;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+}
+
+.feature {
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1 1 200px;
+}
+
+.why-us ul {
+    margin-top: 1em;
+    list-style: none;
+    padding-left: 0;
+}
+
+.why-us ul li {
+    margin-bottom: 0.75em;
+    font-size: 1.1em;
+}
+
+.cta {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 3em 2em;
+    border-radius: 0;
+}
+
+.cta h2 {
+    margin-bottom: 0.5em;
+}
+
+.cta .btn {
+    background: white;
+    color: #0072ff;
+    margin-top: 1em;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+.content h3 {
+    color: #0072ff;
+}
+
+/* ====================
+   RESPONSIVE STYLES
+==================== */
+@media (max-width: 768px) {
+    
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        margin-top: 0.5em;
+        align-items: flex-start;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .auth-buttons {
+        margin-top: 0.4em;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .auth-btn,
+    .btn {
+        padding: 0.1em 0.3em;
+        font-size: 0.85em;
+    }
+    .logout-btn{
+        padding: 0.1em 0.4em;
+        font-size: 0.8em;
+        width: 6em;
+        height: 3em;
+    }
+
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        padding: 1.5em;
+        margin: 2em 1em;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+
+    .content form {
+        padding: 1em;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.85em;
+        padding: 0.5em;
+    }
+
+    .job-listing {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .job p,
+    .service p {
+        margin-left: 0;
+    }
+}
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.hidden {
+  display: none !important;
+}
+.explore-section {
+  padding: 4em 2em;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.explore-section h2 {
+  color: #333;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.explore-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.explore-card {
+  background-color: #f8f8f8;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 250px;
+  flex: 1 1 200px;
+  transition: transform 0.3s;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.explore-card i {
+  font-size: 2em;
+  color: #0072ff;
+  margin-bottom: 0.5em;
+}
+
+.explore-card h3 {
+  color: #0072ff;
+  margin-bottom: 0.5em;
+}
+
+.explore-card p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .explore-section {
+    padding: 2em 1em;
+  }
+
+  .explore-card {
+    padding: 1.5em;
+    font-size: 0.9em;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#closeModal {
+  position: absolute;
+  top: 0.8em;
+  right: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-content h2 {
+  color: #0072ff;
+  margin-bottom: 0.5em;
+}
+
+.modal-content p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.modal-content .btn {
+  background-color: #0072ff;
+  color: white;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+/* Remove default link styling in cards */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Optionally add hover effect */
+.card-link:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+

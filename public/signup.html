@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup - Codynex</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div> Codynex</div>
+            </div>
+      <div class="nav-right">
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="login.html" class="auth-btn">Login</a>
+          <a href="signup.html" class="auth-btn signup">Signup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Create an Account</h2>
+    <form id="signup-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        <button type="submit">Signup</button>
+    </form>
+
+
+    <p style="text-align: center; margin-top: 1em;">
+      Already have an account? <a href="login.html" style="color: #0066ff;">Login here</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Codynex. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-items').classList.toggle('active');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
