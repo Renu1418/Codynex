@@ -1,37 +1,89 @@
-# Codynex
+# 🚀 Codynex
 
-Codynex is a full-stack web application developed to demonstrate modern web development skills including authentication, database integration, and API development.
+Codynex is a modern full-stack web application built to showcase practical web development skills, including authentication, database integration, REST APIs, email communication, and responsive UI design.
 
-## 🚀 Tech Stack
-Frontend:
-- HTML
-- CSS
-- JavaScript
+## 🌐 Live Demo
 
-Backend:
-- Node.js
-- Express.js
+**Frontend:** https://codynex-frontend.onrender.com
 
-Database:
-- MongoDB Atlas
-- Mongoose ODM
+**Backend:** https://codynex.onrender.com
+
+---
 
 ## ✨ Features
-- User Signup & Login (JWT Authentication)
-- Contact Form with Email Notification (Nodemailer)
-- Secure API Integration
-- MongoDB Cloud Database Storage
-- Responsive UI
 
-## 🔐 Security Features
-- Environment Variables (.env)
-- JWT Authentication
-- MongoDB Atlas Secure Connection
+- 🔐 User Signup & Login
+- 🚪 Logout functionality
+- 🔑 JWT-based Authentication
+- 🔒 Password Hashing with bcrypt
+- 📧 Contact Form with Email Notifications
+- 💾 MongoDB Database Integration
+- 🌐 REST API Development
+- 📱 Fully Responsive UI
+- 🎨 Modern UI with Tailwind CSS
+- ⚡ AOS Animations
+- ☁️ Deployed on Render
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Tailwind CSS
+- Font Awesome
+- AOS (Animate On Scroll)
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- Nodemailer / Brevo API
+- dotenv
+- CORS
+
+### Deployment
+
+- Render
+- MongoDB Atlas
+- Brevo
+
+---
 
 ## 📂 Project Structure
-Frontend → Public Folder  
-Backend → Node + Express API  
-Database → MongoDB Atlas Cloud  
 
-## 👩‍💻 Developer
-Renu Sharma
+```text
+Codynex/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── server.js
+│   └── package.json
+│
+├── public/
+│   ├── index.html
+│   ├── about.html
+│   ├── services.html
+│   ├── careers.html
+│   ├── contact.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── script.js
+│   ├── index.css
+│   └── tailwind.css
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
