@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
-import contactRoute from './routes/contact.js';
+import contactRoute from './controllers/contact.js';
 import dotenv from "dotenv";
 dotenv.config();
 
