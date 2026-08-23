@@ -1,133 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Codynex - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<style>
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block !important;
-    }
-}
-</style>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <script>
+        function toggleMenu() {
+            const navRight = document.querySelector('.nav-right');
+
+            if (navRight) {
+                navRight.classList.toggle('hidden');
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <div class="nav-left">
+
+            <div class="logo flex items-center gap-3">
+
+                <div
+                    class="menu-toggle hidden cursor-pointer text-xl text-[#C85A3F] md:hidden"
+                    onclick="toggleMenu()"
+                >
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-            <div class="nav-right">
-                <ul class="nav-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+        </div>
+
+
+        <div
+            class="nav-right absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <ul class="nav-items flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="font-semibold text-[#C85A3F]"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="about.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="services.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="careers.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
-                <div class="auth-buttons">
-                <a href="login.html" class="auth-btn login-btn">Login</a>
-                <a href="signup.html" class="auth-btn signup-btn signup">Signup</a>
-                <button class="logout-btn" style="display: none;">Logout</button>
+
+
+                <div class="auth-buttons flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <a
+                        href="login.html"
+                        class="auth-btn login-btn px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="auth-btn signup-btn rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+                    <button
+                        class="logout-btn hidden rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Logout
+                    </button>
+
                 </div>
 
             </div>
-        </nav>
-    </header>
 
-    <section class="features">
-        <h2>What We Offer</h2>
-        <div class="feature-grid">
-            
-            <a href="web-solutions.html" class="card-link">
-            <div class="feature">
-                <h3 style="color: #0066ff;"><i class="fa-solid fa-globe"></i> Web Solutions</h3>
-                <p>Custom websites and portals to strengthen your online presence.</p>
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="flex min-h-[calc(100vh-73px)] items-center border-b border-[#DDD8CF] bg-[#F7F5F0]">
+
+    <div class="mx-auto w-full max-w-7xl px-6 py-10 lg:px-8 lg:py-12">
+
+        <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+
+
+            <!-- LEFT -->
+
+            <div
+                class="lg:col-span-7"
+                data-aos="fade-up"
+            >
+
+                <div class="mb-5 flex items-center gap-3">
+
+                    <span class="h-[2px] w-10 bg-[#C85A3F]"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#77716A]">
+                        Digital Technology Studio
+                    </span>
+
+                </div>
+
+
+                <h1 class="max-w-4xl text-[3rem] font-bold leading-[1] tracking-[-0.055em] text-[#2F2A26] sm:text-5xl lg:text-[5rem]">
+
+                    We build
+
+                    <span class="text-[#C85A3F]">
+                        digital
+                    </span>
+
+                    experiences that matter.
+
+                </h1>
+
+
+                <p class="mt-6 max-w-xl text-base leading-7 text-[#68645F] sm:text-lg">
+
+                    Codynex helps businesses turn ideas into reliable
+                    websites, applications and technology solutions
+                    designed for the real world.
+
+                </p>
+
+
+                <div class="mt-7 flex flex-wrap items-center gap-5">
+
+                    <a
+                        href="services.html"
+                        class="inline-flex items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+                    >
+
+                        Explore Services
+
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </a>
+
+
+                    <a
+                        href="contact.html"
+                        class="group inline-flex items-center gap-3 text-sm font-semibold text-[#514A44]"
+                    >
+
+                        Let's talk
+
+                        <span class="text-[#C85A3F] transition-transform group-hover:translate-x-1">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
             </div>
+
+
+
+            <!-- RIGHT VISUAL -->
+
+            <div
+                class="relative lg:col-span-5"
+                data-aos="fade-left"
+            >
+
+                <div class="relative mx-auto max-w-sm lg:max-w-md">
+
+                    <div class="relative aspect-[4/4.5] overflow-hidden rounded-2xl bg-[#E7DED4] shadow-lg">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&auto=format&fit=crop&q=80"
+                            alt="Technology team"
+                            class="h-full w-full object-cover"
+                        >
+
+                        <div class="absolute inset-0 bg-[#C85A3F]/10"></div>
+
+
+                        <div class="absolute bottom-5 left-5 rounded-lg bg-white/90 px-4 py-3 backdrop-blur-sm">
+
+                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                                Ideas → Technology
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT WE OFFER
+========================================================= -->
+
+<section class="border-b border-[#DDD8CF] bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-10 lg:grid-cols-12">
+
+
+            <div
+                class="lg:col-span-4"
+                data-aos="fade-up"
+            >
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    What we do
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Solutions built around your business.
+                </h2>
+
+                <p class="mt-5 max-w-sm text-sm leading-7 text-[#77716A]">
+                    Practical technology solutions without unnecessary
+                    complexity.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-8">
+
+
+                <!-- WEB -->
+
+                <a
+                    href="web-solutions.html"
+                    class="group block border-t border-[#D9D4CC] py-7"
+                    data-aos="fade-up"
+                >
+
+                    <div class="grid items-start gap-5 sm:grid-cols-[60px_1fr_auto]">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            01
+                        </span>
+
+                        <div>
+
+                            <div class="flex items-center gap-4">
+
+                                <i class="fa-solid fa-globe text-lg text-[#C85A3F]"></i>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    Web Solutions
+                                </h3>
+
+                            </div>
+
+                            <p class="mt-3 max-w-xl text-sm leading-7 text-[#77716A]">
+                                Custom websites and portals that create
+                                strong and meaningful online experiences.
+                            </p>
+
+                        </div>
+
+                        <span class="text-2xl text-[#A39C94] transition group-hover:translate-x-2 group-hover:text-[#C85A3F]">
+                            →
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- MOBILE -->
+
+                <a
+                    href="mobile-apps.html"
+                    class="group block border-t border-[#D9D4CC] py-7"
+                    data-aos="fade-up"
+                >
+
+                    <div class="grid items-start gap-5 sm:grid-cols-[60px_1fr_auto]">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            02
+                        </span>
+
+                        <div>
+
+                            <div class="flex items-center gap-4">
+
+                                <i class="fa-solid fa-mobile-screen text-lg text-[#C85A3F]"></i>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    Mobile Apps
+                                </h3>
+
+                            </div>
+
+                            <p class="mt-3 max-w-xl text-sm leading-7 text-[#77716A]">
+                                Intuitive and scalable Android and iOS
+                                applications designed around users.
+                            </p>
+
+                        </div>
+
+                        <span class="text-2xl text-[#A39C94] transition group-hover:translate-x-2 group-hover:text-[#C85A3F]">
+                            →
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- CLOUD -->
+
+                <a
+                    href="cloud-integration.html"
+                    class="group block border-y border-[#D9D4CC] py-7"
+                    data-aos="fade-up"
+                >
+
+                    <div class="grid items-start gap-5 sm:grid-cols-[60px_1fr_auto]">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            03
+                        </span>
+
+                        <div>
+
+                            <div class="flex items-center gap-4">
+
+                                <i class="fa-solid fa-cloud-arrow-up text-lg text-[#C85A3F]"></i>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    Cloud Integration
+                                </h3>
+
+                            </div>
+
+                            <p class="mt-3 max-w-xl text-sm leading-7 text-[#77716A]">
+                                Modern cloud infrastructure that helps
+                                businesses stay flexible and scalable.
+                            </p>
+
+                        </div>
+
+                        <span class="text-2xl text-[#A39C94] transition group-hover:translate-x-2 group-hover:text-[#C85A3F]">
+                            →
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPLORE MORE
+========================================================= -->
+
+<section class="bg-[#F7F5F0]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+
+        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    More capabilities
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Explore More
+                </h2>
+
+            </div>
+
+            <p class="max-w-sm text-sm leading-7 text-[#77716A]">
+                Technology is more than development.
+                It is about making things work better.
+            </p>
+
+        </div>
+
+
+
+        <div class="grid overflow-hidden rounded-2xl border border-[#D9D4CC] sm:grid-cols-3">
+
+
+            <!-- AUTOMATION -->
+
+            <a
+                href="automation.html"
+                class="explore-card group block cursor-pointer border-b border-[#D9D4CC] bg-white p-8 transition hover:bg-[#FFF9F5] sm:border-b-0 sm:border-r"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center justify-between">
+
+                    <span class="text-sm font-bold text-[#A39C94]">
+                        01
+                    </span>
+
+                    <i class="fas fa-cogs text-[#C85A3F]"></i>
+
+                </div>
+
+                <h3 class="mt-14 text-xl font-bold text-[#2F2A26]">
+                    Automation
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                    Streamline operations with modern automation tools.
+                </p>
+
+                <span class="mt-7 inline-block text-sm font-semibold text-[#514A44]">
+                    Explore
+
+                    <span class="ml-2 text-[#C85A3F] transition group-hover:ml-3">
+                        →
+                    </span>
+
+                </span>
+
             </a>
 
-            <a href="mobile-apps.html" class="card-link">
-            <div class="feature">
-                <h3 style="color: #0066ff;"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps</h3>
-                <p>Intuitive and scalable Android/iOS apps for your business growth.</p>
-            </div>
+
+
+            <!-- CYBERSECURITY -->
+
+            <a
+                href="cybersecurity.html"
+                class="explore-card group block cursor-pointer border-b border-[#D9D4CC] bg-white p-8 transition hover:bg-[#FFF9F5] sm:border-b-0 sm:border-r"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center justify-between">
+
+                    <span class="text-sm font-bold text-[#A39C94]">
+                        02
+                    </span>
+
+                    <i class="fas fa-shield-alt text-[#C85A3F]"></i>
+
+                </div>
+
+                <h3 class="mt-14 text-xl font-bold text-[#2F2A26]">
+                    Cybersecurity
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                    Protect your digital infrastructure from threats.
+                </p>
+
+                <span class="mt-7 inline-block text-sm font-semibold text-[#514A44]">
+                    Explore
+
+                    <span class="ml-2 text-[#C85A3F] transition group-hover:ml-3">
+                        →
+                    </span>
+
+                </span>
+
             </a>
 
-            <a href="cloud-integration.html" class="card-link">
-            <div class="feature">
-                <h3 style="color: #0066ff;"><i class="fa-solid fa-cloud-arrow-up"></i> Cloud Integration</h3>
-                <p>Modern cloud infrastructure services to ensure business agility.</p>
-            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <a
+                href="analytics.html"
+                class="explore-card group block cursor-pointer bg-white p-8 transition hover:bg-[#FFF9F5]"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center justify-between">
+
+                    <span class="text-sm font-bold text-[#A39C94]">
+                        03
+                    </span>
+
+                    <i class="fas fa-chart-line text-[#C85A3F]"></i>
+
+                </div>
+
+                <h3 class="mt-14 text-xl font-bold text-[#2F2A26]">
+                    Analytics
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                    Leverage data-driven insights for strategic decisions.
+                </p>
+
+                <span class="mt-7 inline-block text-sm font-semibold text-[#514A44]">
+                    Explore
+
+                    <span class="ml-2 text-[#C85A3F] transition group-hover:ml-3">
+                        →
+                    </span>
+
+                </span>
+
             </a>
 
         </div>
-    </section>
 
-    <!-- Featured Services Preview -->
-     <section class="explore-section">
-        <h2>Explore More</h2>
-        <div class="explore-grid">
-            <div class="explore-card" data-modal="automation">
-            <i class="fas fa-cogs"></i>
-            <h3>Automation</h3>
-            <p>Streamline operations with modern automation tools.</p>
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+
+<section class="bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-14 lg:grid-cols-12">
+
+
+            <div
+                class="lg:col-span-5"
+                data-aos="fade-right"
+            >
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Why Codynex
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Technology that works for you.
+                </h2>
+
+                <p class="mt-5 max-w-md text-sm leading-8 text-[#77716A]">
+                    We focus on building dependable digital solutions
+                    with clean technology and a user-first mindset.
+                </p>
+
             </div>
-            <div class="explore-card" data-modal="cybersecurity">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Cybersecurity</h3>
-            <p>Protect your digital infrastructure from threats.</p>
+
+
+
+            <div
+                class="lg:col-span-7"
+                data-aos="fade-left"
+            >
+
+                <ul class="divide-y divide-[#D9D4CC] border-y border-[#D9D4CC]">
+
+
+                    <li class="flex items-center gap-5 py-5">
+
+                        <span class="text-[#C85A3F]">
+                            <i class="fa-solid fa-square-check"></i>
+                        </span>
+
+                        <span class="text-sm font-medium text-[#3F3934]">
+                            Experienced & Certified Developers
+                        </span>
+
+                    </li>
+
+
+                    <li class="flex items-center gap-5 py-5">
+
+                        <span class="text-[#C85A3F]">
+                            <i class="fa-solid fa-clock"></i>
+                        </span>
+
+                        <span class="text-sm font-medium text-[#3F3934]">
+                            Fast and Agile Delivery
+                        </span>
+
+                    </li>
+
+
+                    <li class="flex items-center gap-5 py-5">
+
+                        <span class="text-[#C85A3F]">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+
+                        <span class="text-sm font-medium text-[#3F3934]">
+                            Secure, Scalable Technologies
+                        </span>
+
+                    </li>
+
+
+                    <li class="flex items-center gap-5 py-5">
+
+                        <span class="text-[#C85A3F]">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </span>
+
+                        <span class="text-sm font-medium text-[#3F3934]">
+                            24/7 Client Support
+                        </span>
+
+                    </li>
+
+                </ul>
+
             </div>
-            <div class="explore-card" data-modal="analytics">
-            <i class="fas fa-chart-line"></i>
-            <h3>Analytics</h3>
-            <p>Leverage data-driven insights for strategic decisions.</p>
-            </div>
+
         </div>
-    </section>
 
-        <!-- Modal Template -->
-        <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="closeModal">&times;</span>
-            <div id="modal-body">
-            <!-- Dynamic content injected by JS -->
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="border-t border-[#DDD8CF] bg-[#EFE6DD]">
+
+    <div
+        class="mx-auto max-w-7xl px-6 py-20 lg:px-8"
+        data-aos="fade-up"
+    >
+
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Have an idea?
+                </span>
+
+                <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.04em] text-[#2F2A26] sm:text-5xl">
+                    Let's turn it into something real.
+                </h2>
+
             </div>
+
+
+            <a
+                href="contact.html"
+                class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+            >
+
+                Contact Us
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </a>
+
         </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
         </div>
 
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
-        <h2 style="color: #256862;">Why Choose Us?</h2>
-        <ul>
-            <li><i class="fa-solid fa-square-check"></i> Experienced & Certified Developers</li>
-            <li><i class="fa-solid fa-clock"></i> Fast and Agile Delivery</li>
-            <li><i class="fa-solid fa-lock"></i> Secure, Scalable Technologies</li>
-            <li><i class="fa-solid fa-cloud-arrow-up"></i> 24/7 Client Support</li>
-        </ul>
-    </section>
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Ready to Get Started?</h2>
-        <p>Let’s build something amazing together.</p>
-        <a href="contact.html" class="btn">Contact Us</a>
-    </section>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Codynex. All rights reserved.</p>
-    </footer>
+</footer>
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
+
+
 </body>
 </html>

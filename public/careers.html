@@ -1,71 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Careers - Codynex</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-<style>
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block !important;
-    }
-}
-</style>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <script>
+        function toggleMenu() {
+            const navRight = document.querySelector(".nav-right");
+
+            if (navRight) {
+                navRight.classList.toggle("hidden");
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <!-- LOGO -->
+
+        <div class="nav-left">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="menu-toggle hidden cursor-pointer text-xl text-[#C85A3F] md:hidden"
+                    onclick="toggleMenu()"
+                >
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-            <div class="nav-right">
-                <ul class="nav-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="nav-right absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <!-- NAV LINKS -->
+
+                <ul class="flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="about.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="services.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="careers.html"
+                            class="font-semibold text-[#C85A3F]"
+                        >
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
-                <div class="auth-buttons">
-                <a href="login.html" class="auth-btn login-btn">Login</a>
-                <a href="signup.html" class="auth-btn signup-btn signup">Signup</a>
-                <button class="logout-btn" style="display: none;">Logout</button>
+
+
+                <!-- AUTH BUTTONS -->
+
+                <div class="flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <!-- LOGIN -->
+
+                    <a
+                        href="login.html"
+                        class="login-btn px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+
+                    <!-- SIGNUP -->
+
+                    <a
+                        href="signup.html"
+                        class="signup-btn rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+
+                    <!-- LOGOUT -->
+
+                    <button
+                        type="button"
+                        class="logout-btn hidden rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Logout
+                    </button>
+
                 </div>
 
             </div>
-        </nav>
-    </header>
 
-    <section class="content">
-        <h2>Join Our Team</h2>
-        <p>We’re always on the lookout for passionate individuals who are excited to shape the digital future. Explore our current openings and be a part of something great!</p>
-
-        <div class="job-listing">
-            <div class="job">
-                <h3>👨‍💻 Frontend Intern</h3>
-                <p>Work with HTML, CSS, and JavaScript to bring dynamic designs to life. Ideal for beginners looking to gain real-world experience.</p>
-            </div>
-            <div class="job">
-                <h3>🛠️ Backend Developer</h3>
-                <p>Responsible for developing APIs, managing databases, and ensuring high performance with technologies like Node.js and MongoDB.</p>
-            </div>
-            <div class="job">
-                <h3>🎨 UI/UX Designer</h3>
-                <p>Design intuitive interfaces and engaging user experiences using tools such as Figma and Adobe XD.</p>
-            </div>
         </div>
 
-        <p style="margin-top: 2em;">📩 Email your CV to <strong>careers@Codynex.com</strong> and let’s build something amazing together!</p>
-    </section>
-    </section>
+    </nav>
 
-    <footer>
-        <p>&copy; 2025 Codynex. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+</header>
+
+
+
+<!-- =========================================================
+     CAREERS
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     OPEN POSITIONS
+========================================================= -->
+
+<section class="bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="mb-12">
+
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                Open positions
+            </span>
+
+            <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                Find your place at Codynex.
+            </h2>
+
+            <p class="mt-4 max-w-xl text-sm leading-7 text-[#77716A]">
+                Explore opportunities to learn, contribute and
+                grow with our technology team.
+            </p>
+
+        </div>
+
+
+        <div class="border-t border-[#D9D4CC]">
+
+
+            <!-- FRONTEND -->
+
+            <div
+                class="group border-b border-[#D9D4CC] py-8"
+                data-aos="fade-up"
+            >
+
+                <div class="grid gap-6 md:grid-cols-[70px_1fr_auto] md:items-start">
+
+                    <div>
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            01
+                        </span>
+                    </div>
+
+
+                    <div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#FFF1EA] text-[#C85A3F]">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    Frontend Intern
+                                </h3>
+
+                                <p class="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-[#A39C94]">
+                                    Internship · Remote
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="mt-5 max-w-2xl text-sm leading-7 text-[#77716A]">
+                            Work with HTML, CSS and JavaScript to bring
+                            modern designs to life. This role is ideal for
+                            beginners looking to gain practical,
+                            real-world development experience.
+                        </p>
+
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                HTML
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                CSS
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="md:pt-2">
+
+                        <a
+                            href="contact.html"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-[#C85A3F] transition hover:gap-3"
+                        >
+                            Apply Now
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BACKEND -->
+
+            <div
+                class="group border-b border-[#D9D4CC] py-8"
+                data-aos="fade-up"
+            >
+
+                <div class="grid gap-6 md:grid-cols-[70px_1fr_auto] md:items-start">
+
+                    <div>
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            02
+                        </span>
+                    </div>
+
+
+                    <div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#FFF1EA] text-[#C85A3F]">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    Backend Developer
+                                </h3>
+
+                                <p class="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-[#A39C94]">
+                                    Full Time · Hybrid
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="mt-5 max-w-2xl text-sm leading-7 text-[#77716A]">
+                            Develop APIs, manage databases and build
+                            reliable backend systems using technologies
+                            such as Node.js, Express and MongoDB.
+                        </p>
+
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                Node.js
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                Express
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                MongoDB
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="md:pt-2">
+
+                        <a
+                            href="contact.html"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-[#C85A3F] transition hover:gap-3"
+                        >
+                            Apply Now
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UI UX -->
+
+            <div
+                class="group border-b border-[#D9D4CC] py-8"
+                data-aos="fade-up"
+            >
+
+                <div class="grid gap-6 md:grid-cols-[70px_1fr_auto] md:items-start">
+
+                    <div>
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            03
+                        </span>
+                    </div>
+
+
+                    <div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#FFF1EA] text-[#C85A3F]">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-2xl font-bold tracking-tight text-[#2F2A26]">
+                                    UI / UX Designer
+                                </h3>
+
+                                <p class="mt-1 text-xs font-medium uppercase tracking-[0.15em] text-[#A39C94]">
+                                    Full Time · Remote
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="mt-5 max-w-2xl text-sm leading-7 text-[#77716A]">
+                            Create intuitive interfaces and engaging user
+                            experiences while working closely with
+                            developers and product teams.
+                        </p>
+
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                Figma
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                UI Design
+                            </span>
+
+                            <span class="rounded-full bg-[#F7F5F0] px-3 py-1 text-xs font-medium text-[#68645F]">
+                                UX
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="md:pt-2">
+
+                        <a
+                            href="contact.html"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-[#C85A3F] transition hover:gap-3"
+                        >
+                            Apply Now
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORK WITH US
+========================================================= -->
+
+<section class="bg-[#F7F5F0]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+
+            <div
+                class="lg:col-span-6"
+                data-aos="fade-right"
+            >
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Why join us
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Do meaningful work with a growing team.
+                </h2>
+
+                <p class="mt-5 max-w-xl text-sm leading-8 text-[#77716A]">
+                    At Codynex, you'll get the opportunity to work on
+                    real projects, learn modern technologies and
+                    contribute ideas that actually make a difference.
+                </p>
+
+            </div>
+
+
+            <div
+                class="lg:col-span-6"
+                data-aos="fade-left"
+            >
+
+                <div class="grid gap-4 sm:grid-cols-2">
+
+                    <div class="rounded-xl border border-[#D9D4CC] bg-white p-6">
+
+                        <i class="fa-solid fa-lightbulb text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-5 font-bold">
+                            Learn & Grow
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Keep learning and build skills through real projects.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#D9D4CC] bg-white p-6">
+
+                        <i class="fa-solid fa-people-group text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-5 font-bold">
+                            Great Team
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Collaborate with people who love building technology.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#D9D4CC] bg-white p-6">
+
+                        <i class="fa-solid fa-rocket text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-5 font-bold">
+                            Real Impact
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Work on products that solve real business problems.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#D9D4CC] bg-white p-6">
+
+                        <i class="fa-solid fa-arrow-trend-up text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-5 font-bold">
+                            Grow Together
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Build your career alongside a growing company.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="border-t border-[#DDD8CF] bg-[#EFE6DD]">
+
+    <div
+        class="mx-auto max-w-7xl px-6 py-20 lg:px-8"
+        data-aos="fade-up"
+    >
+
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Don't see your role?
+                </span>
+
+                <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.04em] text-[#2F2A26] sm:text-5xl">
+                    We'd still love to hear from you.
+                </h2>
+
+                <p class="mt-4 max-w-xl text-sm leading-7 text-[#77716A]">
+                    Send us your CV and tell us how you can contribute
+                    to the Codynex team.
+                </p>
+
+            </div>
+
+
+            <a
+                href="mailto:careers@Codynex.com"
+                class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+            >
+                Send Your CV
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
+        </div>
+
+
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
+
+
+<!-- =========================================================
+     LOGIN / LOGOUT UI
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const loginBtn = document.querySelector(".login-btn");
+    const signupBtn = document.querySelector(".signup-btn");
+    const logoutBtn = document.querySelector(".logout-btn");
+
+    /*
+        IMPORTANT:
+        Agar tumhare login ke baad localStorage me token
+        kisi aur naam se save hota hai, yahan us naam ko change karna.
+    */
+
+    const token =
+        localStorage.getItem("token") ||
+        localStorage.getItem("accessToken") ||
+        localStorage.getItem("jwt");
+
+    // USER LOGGED IN
+    if (token) {
+
+        if (loginBtn) {
+            loginBtn.classList.add("hidden");
+        }
+
+        if (signupBtn) {
+            signupBtn.classList.add("hidden");
+        }
+
+        if (logoutBtn) {
+            logoutBtn.classList.remove("hidden");
+        }
+
+    }
+
+    // USER LOGGED OUT
+    else {
+
+        if (loginBtn) {
+            loginBtn.classList.remove("hidden");
+        }
+
+        if (signupBtn) {
+            signupBtn.classList.remove("hidden");
+        }
+
+        if (logoutBtn) {
+            logoutBtn.classList.add("hidden");
+        }
+
+    }
+
+
+    // LOGOUT
+    if (logoutBtn) {
+
+        logoutBtn.addEventListener("click", async function () {
+
+            try {
+
+                /*
+                    Backend logout API
+                    Agar tumhare backend ka logout endpoint
+                    different hai to sirf URL change karna.
+                */
+
+                await fetch("/api/auth/logout", {
+                    method: "GET",
+                    credentials: "include"
+                });
+
+            } catch (error) {
+
+                console.log("Logout API error:", error);
+
+            }
+
+
+            // Clear local authentication data
+
+            localStorage.removeItem("token");
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("jwt");
+            localStorage.removeItem("user");
+
+            sessionStorage.removeItem("token");
+            sessionStorage.removeItem("accessToken");
+            sessionStorage.removeItem("jwt");
+
+
+            // UI update
+
+            logoutBtn.classList.add("hidden");
+
+            if (loginBtn) {
+                loginBtn.classList.remove("hidden");
+            }
+
+            if (signupBtn) {
+                signupBtn.classList.remove("hidden");
+            }
+
+
+            // Redirect to home
+
+            window.location.href = "index.html";
+
+        });
+
+    }
+
+});
+
+</script>
+
+
 </body>
 </html>

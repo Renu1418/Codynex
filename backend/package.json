@@ -1,6 +1,7 @@
 {
   "name": "codynex-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend service for Codynex personal web project",
   "main": "server.js",
   "scripts": {

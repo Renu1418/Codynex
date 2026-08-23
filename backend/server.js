@@ -1,11 +1,16 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const path = require('path');
-const connectDB = require('./config/db');
-const authRoutes = require('./routes/authRoutes');
-const contactRoute = require('./routes/contact');
-require('dotenv').config();
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import connectDB from './config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import contactRoute from './routes/contact.js';
+import dotenv from "dotenv";
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -19,7 +24,6 @@ app.use(cors({
   methods: ['GET', 'POST'],
 }));
 
-
 // Middleware
 app.use(bodyParser.json());
 
@@ -27,13 +31,12 @@ app.use(bodyParser.json());
 app.use('/api/contact', contactRoute);
 app.use('/api/auth', authRoutes);
 
-// current server.js (backend folder me)
+// Static files and frontend route
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
-
 
 // Server Listener
 console.log('MONGO_URI:', process.env.MONGO_URI ? '✅' : '❌');

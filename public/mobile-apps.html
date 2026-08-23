@@ -1,61 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobile Apps | Codynex</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Apps | Codynex</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+    <script>
+        function toggleMenu() {
+            const navRight = document.querySelector('.nav-right');
+
+            if (navRight) {
+                navRight.classList.toggle('hidden');
+            }
+        }
+    </script>
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <!-- Logo -->
+
+        <div class="nav-left">
+
+            <div class="logo flex items-center gap-3">
+
+                <div
+                    class="menu-toggle hidden cursor-pointer text-xl text-[#C85A3F] md:hidden"
+                    onclick="toggleMenu()"
+                >
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-      <div class="nav-right">
-        <ul class="nav-items">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <a href="login.html" class="auth-btn">Login</a>
-          <a href="signup.html" class="auth-btn signup">Signup</a>
+
         </div>
-      </div>
+
+
+        <!-- Navigation -->
+
+        <div
+            class="nav-right absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <ul class="nav-items flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="about.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="services.html"
+                            class="font-semibold text-[#C85A3F]"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="careers.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="auth-buttons flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <a
+                        href="login.html"
+                        class="px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Mobile App Development</h1>
-    <p>Scalable, intuitive apps for Android & iOS tailored to your business needs.</p>
-  </section>
+</header>
 
-  <main class="content">
-    <h2>What We Build</h2>
-    <p>Our team specializes in building high-performance mobile apps with user-first design and robust architecture.</p>
 
-    <h3>Our Expertise</h3>
-    <ul>
-      <li>Cross-platform apps using React Native & Flutter</li>
-      <li>Custom Android/iOS native apps (Java, Kotlin, Swift)</li>
-      <li>Push Notifications, Camera, Maps, and Background Services</li>
-      <li>App Store & Play Store Deployment</li>
-    </ul>
 
-    <h3>Tools & Tech</h3>
-    <ul>
-      <li>React Native, Flutter, Firebase, SQLite, Node.js</li>
-    </ul>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <a class="btn" href="contact.html">Start Your App Project</a>
-  </main>
+<main>
 
-  <footer>
-    <p>&copy; 2025 Codynex. All rights reserved.</p>
-  </footer>
+<section class="flex min-h-[calc(100vh-73px)] items-center border-b border-[#DDD8CF] bg-[#F7F5F0]">
+
+    <div class="mx-auto w-full max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+
+        <div class="grid items-center gap-14 lg:grid-cols-12 lg:gap-20">
+
+
+            <!-- LEFT -->
+
+            <div
+                class="lg:col-span-7"
+                data-aos="fade-up"
+            >
+
+                <div class="mb-6 flex items-center gap-3">
+
+                    <span class="h-[2px] w-10 bg-[#C85A3F]"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#77716A]">
+                        Mobile Development
+                    </span>
+
+                </div>
+
+
+                <h1 class="max-w-4xl text-[3.2rem] font-bold leading-[1] tracking-[-0.055em] text-[#2F2A26] sm:text-5xl lg:text-[5.5rem]">
+
+                    Mobile apps
+
+                    <span class="text-[#C85A3F]">
+                        built
+                    </span>
+
+                    for real users.
+
+                </h1>
+
+
+                <p class="mt-7 max-w-xl text-base leading-8 text-[#68645F] sm:text-lg">
+
+                    We create scalable, intuitive and high-performance
+                    mobile applications designed around your business
+                    goals and your users.
+
+                </p>
+
+
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+
+                    <a
+                        href="contact.html"
+                        class="inline-flex items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+                    >
+
+                        Start Your App Project
+
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </a>
+
+                    <a
+                        href="services.html"
+                        class="group inline-flex items-center gap-3 text-sm font-semibold text-[#514A44]"
+                    >
+
+                        View Services
+
+                        <span class="text-[#C85A3F] transition-transform group-hover:translate-x-1">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT VISUAL -->
+
+            <div
+                class="lg:col-span-5"
+                data-aos="fade-left"
+            >
+
+                <div class="relative mx-auto max-w-md">
+
+                    <div class="relative overflow-hidden rounded-2xl border border-[#DDD8CF] bg-white p-8 shadow-sm">
+
+                        <div class="flex items-center justify-between">
+
+                            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#A39C94]">
+                                Mobile Experience
+                            </span>
+
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF1EB] text-[#C85A3F]">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </span>
+
+                        </div>
+
+
+                        <!-- Phone Mockup -->
+
+                        <div class="mx-auto mt-8 w-48 rounded-[2rem] border-[6px] border-[#3F3934] bg-[#F7F5F0] p-2 shadow-xl">
+
+                            <div class="overflow-hidden rounded-[1.5rem] bg-white">
+
+                                <div class="flex items-center justify-between border-b border-[#EEE8E2] px-4 py-3">
+
+                                    <span class="text-[9px] font-bold text-[#2F2A26]">
+                                        Codynex
+                                    </span>
+
+                                    <i class="fa-solid fa-bell text-[9px] text-[#C85A3F]"></i>
+
+                                </div>
+
+
+                                <div class="p-4">
+
+                                    <div class="h-20 rounded-xl bg-[#F2E5DD]"></div>
+
+                                    <div class="mt-4 space-y-2">
+
+                                        <div class="h-2 w-3/4 rounded-full bg-[#DED6CF]"></div>
+
+                                        <div class="h-2 w-full rounded-full bg-[#EAE4DE]"></div>
+
+                                        <div class="h-2 w-2/3 rounded-full bg-[#EAE4DE]"></div>
+
+                                    </div>
+
+
+                                    <div class="mt-5 grid grid-cols-2 gap-2">
+
+                                        <div class="h-12 rounded-lg bg-[#FFF1EB]"></div>
+
+                                        <div class="h-12 rounded-lg bg-[#F3EFEA]"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-7 grid grid-cols-3 gap-3">
+
+                            <div class="rounded-xl bg-[#F7F5F0] p-3 text-center">
+
+                                <i class="fa-brands fa-android text-[#C85A3F]"></i>
+
+                                <p class="mt-1 text-[10px] font-semibold text-[#68645F]">
+                                    Android
+                                </p>
+
+                            </div>
+
+                            <div class="rounded-xl bg-[#F7F5F0] p-3 text-center">
+
+                                <i class="fa-brands fa-apple text-[#C85A3F]"></i>
+
+                                <p class="mt-1 text-[10px] font-semibold text-[#68645F]">
+                                    iOS
+                                </p>
+
+                            </div>
+
+                            <div class="rounded-xl bg-[#F7F5F0] p-3 text-center">
+
+                                <i class="fa-solid fa-cloud text-[#C85A3F]"></i>
+
+                                <p class="mt-1 text-[10px] font-semibold text-[#68645F]">
+                                    Cloud
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT WE BUILD
+========================================================= -->
+
+<section class="border-b border-[#DDD8CF] bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+
+            <div
+                class="lg:col-span-4"
+                data-aos="fade-up"
+            >
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    What we build
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Apps designed around people.
+                </h2>
+
+                <p class="mt-5 max-w-sm text-sm leading-7 text-[#77716A]">
+                    From simple business apps to complex digital
+                    platforms, we focus on performance, usability
+                    and scalability.
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="lg:col-span-8"
+                data-aos="fade-left"
+            >
+
+                <div class="grid gap-5 sm:grid-cols-2">
+
+
+                    <!-- App 01 -->
+
+                    <div class="rounded-2xl border border-[#DDD8CF] bg-[#F7F5F0] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-md">
+
+                        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#C85A3F] shadow-sm">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold text-[#2F2A26]">
+                            Business Apps
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                            Mobile applications that simplify workflows,
+                            manage operations and improve productivity.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- App 02 -->
+
+                    <div class="rounded-2xl border border-[#DDD8CF] bg-[#F7F5F0] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-md">
+
+                        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#C85A3F] shadow-sm">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold text-[#2F2A26]">
+                            Customer Apps
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                            User-friendly experiences that help businesses
+                            connect with and retain their customers.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- App 03 -->
+
+                    <div class="rounded-2xl border border-[#DDD8CF] bg-[#F7F5F0] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-md">
+
+                        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#C85A3F] shadow-sm">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold text-[#2F2A26]">
+                            Cross-Platform Apps
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                            Efficient Android and iOS solutions built
+                            from a shared development foundation.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- App 04 -->
+
+                    <div class="rounded-2xl border border-[#DDD8CF] bg-[#F7F5F0] p-7 transition hover:-translate-y-1 hover:bg-white hover:shadow-md">
+
+                        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#C85A3F] shadow-sm">
+
+                            <i class="fa-solid fa-gauge-high"></i>
+
+                        </div>
+
+                        <h3 class="mt-6 text-xl font-bold text-[#2F2A26]">
+                            High-Performance Apps
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                            Fast, reliable applications optimized for
+                            smooth and consistent user experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERTISE
+========================================================= -->
+
+<section class="bg-[#F7F5F0]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="mb-12">
+
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                Our expertise
+            </span>
+
+            <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                Everything your app needs.
+            </h2>
+
+        </div>
+
+
+        <div class="grid gap-6 lg:grid-cols-2">
+
+
+            <!-- Development -->
+
+            <div
+                class="rounded-2xl border border-[#DDD8CF] bg-white p-8"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center gap-4">
+
+                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF1EB] text-[#C85A3F]">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+
+                    <h3 class="text-xl font-bold">
+                        Development
+                    </h3>
+
+                </div>
+
+                <ul class="mt-7 space-y-4 text-sm text-[#68645F]">
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        React Native & Flutter applications
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Native Android & iOS development
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        API and backend integration
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Scalable application architecture
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Features -->
+
+            <div
+                class="rounded-2xl border border-[#DDD8CF] bg-white p-8"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center gap-4">
+
+                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF1EB] text-[#C85A3F]">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </span>
+
+                    <h3 class="text-xl font-bold">
+                        Mobile Features
+                    </h3>
+
+                </div>
+
+                <ul class="mt-7 space-y-4 text-sm text-[#68645F]">
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Push notifications
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Camera and media integration
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Maps and location services
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fa-solid fa-check mt-1 text-[#C85A3F]"></i>
+                        Background services and offline support
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TECHNOLOGY
+========================================================= -->
+
+<section class="border-y border-[#DDD8CF] bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+
+
+            <div
+                class="lg:col-span-5"
+                data-aos="fade-right"
+            >
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Tools & technology
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    The right technology for the job.
+                </h2>
+
+                <p class="mt-5 max-w-md text-sm leading-7 text-[#77716A]">
+                    We choose technologies based on your product,
+                    performance requirements and long-term goals.
+                </p>
+
+            </div>
+
+
+
+            <div
+                class="lg:col-span-7"
+                data-aos="fade-left"
+            >
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-brands fa-react text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            React Native
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-solid fa-mobile-screen text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            Flutter
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-brands fa-android text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            Android
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-brands fa-apple text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            iOS
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-solid fa-fire text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            Firebase
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-[#F7F5F0] p-5 text-center">
+
+                        <i class="fa-solid fa-database text-2xl text-[#C85A3F]"></i>
+
+                        <p class="mt-3 text-sm font-semibold">
+                            SQLite
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="border-b border-[#DDD8CF] bg-[#EFE6DD]">
+
+    <div
+        class="mx-auto max-w-7xl px-6 py-20 lg:px-8"
+        data-aos="fade-up"
+    >
+
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Have an app idea?
+                </span>
+
+                <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.04em] text-[#2F2A26] sm:text-5xl">
+                    Let's build your mobile experience.
+                </h2>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+            >
+
+                Start Your Project
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
+        </div>
+
+
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
+
+
 </body>
 </html>

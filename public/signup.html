@@ -1,61 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Signup - Codynex</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Signup - Codynex</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+    />
+
+    <script>
+        function toggleMenu() {
+            const navRight = document.querySelector('.nav-right');
+
+            if (navRight) {
+                navRight.classList.toggle('hidden');
+            }
+        }
+    </script>
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+
+<body class="min-h-screen bg-[#F7F5F0] text-[#242424] antialiased flex flex-col">
+
+
+    <!-- ========================= NAVBAR ========================= -->
+
+    <header class="border-b border-[#DDD8CF] bg-[#F7F5F0]">
+
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+            <!-- Logo -->
+
+            <div class="nav-left">
+
+                <div class="logo flex items-center gap-3">
+
+                    <div
+                        class="menu-toggle hidden cursor-pointer text-xl md:hidden"
+                        onclick="toggleMenu()"
+                    >
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <a
+                        href="index.html"
+                        class="text-xl font-bold tracking-[-0.03em]"
+                    >
+                        Codynex
+                    </a>
+
+                </div>
+
             </div>
-      <div class="nav-right">
-        <ul class="nav-items">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <a href="login.html" class="auth-btn">Login</a>
-          <a href="signup.html" class="auth-btn signup">Signup</a>
+
+
+            <!-- Navigation -->
+
+            <div
+                class="nav-right absolute left-0 top-[65px] hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-6 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+            >
+
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+
+                    <ul class="nav-items flex flex-col gap-4 text-sm font-medium md:flex-row md:gap-8">
+
+                        <li>
+                            <a
+                                href="index.html"
+                                class="text-[#68645F] transition hover:text-[#C85A3F]"
+                            >
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="about.html"
+                                class="text-[#68645F] transition hover:text-[#C85A3F]"
+                            >
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="services.html"
+                                class="text-[#68645F] transition hover:text-[#C85A3F]"
+                            >
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="careers.html"
+                                class="text-[#68645F] transition hover:text-[#C85A3F]"
+                            >
+                                Careers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="contact.html"
+                                class="text-[#68645F] transition hover:text-[#C85A3F]"
+                            >
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="auth-buttons flex items-center gap-3 border-t border-[#DDD8CF] pt-4 md:border-t-0 md:pt-0">
+
+                        <a
+                            href="login.html"
+                            class="px-3 py-2 text-sm font-medium text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Login
+                        </a>
+
+                        <a
+                            href="signup.html"
+                            class="bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white"
+                        >
+                            Signup
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ========================= SIGNUP ========================= -->
+
+    <main class="flex flex-1 items-center justify-center px-5 py-7 sm:py-8">
+
+        <div class="w-full max-w-[430px]">
+
+
+            <!-- Heading -->
+
+            <div class="mb-5 text-center">
+
+                <h1 class="text-2xl font-bold tracking-[-0.04em] sm:text-3xl">
+                    Create your account
+                </h1>
+
+                <p class="mt-1.5 text-sm text-[#77716A]">
+                    Join Codynex and get started today.
+                </p>
+
+            </div>
+
+
+
+            <!-- Signup Card -->
+
+            <div
+                class="border border-[#DDD8CF] bg-white px-6 py-6 shadow-[0_10px_30px_rgba(36,36,36,0.05)] sm:px-7 sm:py-7"
+            >
+
+                <form
+                    id="signup-form"
+                    class="space-y-4"
+                >
+
+
+                    <!-- Full Name -->
+
+                    <div>
+
+                        <label
+                            for="name"
+                            class="mb-1.5 block text-sm font-semibold text-[#363330]"
+                        >
+                            Full Name
+                        </label>
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-regular fa-user absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-[#9A948D]"
+                            ></i>
+
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                                class="w-full border border-[#D9D4CC] bg-[#FBFAF8] py-3 pl-10 pr-4 text-sm text-[#242424] outline-none transition placeholder:text-[#AAA49D] focus:border-[#C85A3F] focus:bg-white focus:ring-1 focus:ring-[#C85A3F]"
+                            />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div>
+
+                        <label
+                            for="email"
+                            class="mb-1.5 block text-sm font-semibold text-[#363330]"
+                        >
+                            Email
+                        </label>
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-regular fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-[#9A948D]"
+                            ></i>
+
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                                class="w-full border border-[#D9D4CC] bg-[#FBFAF8] py-3 pl-10 pr-4 text-sm text-[#242424] outline-none transition placeholder:text-[#AAA49D] focus:border-[#C85A3F] focus:bg-white focus:ring-1 focus:ring-[#C85A3F]"
+                            />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div>
+
+                        <label
+                            for="password"
+                            class="mb-1.5 block text-sm font-semibold text-[#363330]"
+                        >
+                            Password
+                        </label>
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-[#9A948D]"
+                            ></i>
+
+                            <input
+                                id="password"
+                                type="password"
+                                name="password"
+                                placeholder="Create a password"
+                                required
+                                class="w-full border border-[#D9D4CC] bg-[#FBFAF8] py-3 pl-10 pr-4 text-sm text-[#242424] outline-none transition placeholder:text-[#AAA49D] focus:border-[#C85A3F] focus:bg-white focus:ring-1 focus:ring-[#C85A3F]"
+                            />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Confirm Password -->
+
+                    <div>
+
+                        <label
+                            for="confirmPassword"
+                            class="mb-1.5 block text-sm font-semibold text-[#363330]"
+                        >
+                            Confirm Password
+                        </label>
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-solid fa-shield-halved absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-[#9A948D]"
+                            ></i>
+
+                            <input
+                                id="confirmPassword"
+                                type="password"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                                class="w-full border border-[#D9D4CC] bg-[#FBFAF8] py-3 pl-10 pr-4 text-sm text-[#242424] outline-none transition placeholder:text-[#AAA49D] focus:border-[#C85A3F] focus:bg-white focus:ring-1 focus:ring-[#C85A3F]"
+                            />
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Signup Button -->
+
+                    <button
+                        type="submit"
+                        class="mt-1 w-full bg-[#C85A3F] py-3 text-sm font-semibold text-white transition duration-200 hover:bg-[#A94731] active:scale-[0.99]"
+                    >
+
+                        Create Account
+
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Login Link -->
+
+                <div class="mt-5 border-t border-[#E5E1DB] pt-5 text-center">
+
+                    <p class="text-sm text-[#77716A]">
+
+                        Already have an account?
+
+                        <a
+                            href="login.html"
+                            class="ml-1 font-semibold text-[#C85A3F] transition hover:text-[#A94731]"
+                        >
+                            Login here
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    </nav>
-  </header>
 
-  <main class="content">
-    <h2>Create an Account</h2>
-    <form id="signup-form">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="password" name="password" placeholder="Password" required />
-        <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
-        <button type="submit">Signup</button>
-    </form>
+    </main>
 
 
-    <p style="text-align: center; margin-top: 1em;">
-      Already have an account? <a href="login.html" style="color: #0066ff;">Login here</a>
-    </p>
-  </main>
+    <!-- Existing JS -->
 
-  <footer>
-    <p>&copy; 2025 Codynex. All rights reserved.</p>
-  </footer>
+    <script src="script.js"></script>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-items').classList.toggle('active');
-    }
-  </script>
-  <script src="script.js"></script>
 </body>
+
 </html>

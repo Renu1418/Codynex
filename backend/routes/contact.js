@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
+import nodemailer from 'nodemailer';
+import Contact from '../models/Contact.js'; // ✅ DB MODEL
+
 const router = express.Router();
-const nodemailer = require('nodemailer');
-const Contact = require('../models/Contact'); // ✅ DB MODEL
 
 router.post('/', async (req, res) => {
   const { name, email, message } = req.body;
@@ -44,4 +45,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

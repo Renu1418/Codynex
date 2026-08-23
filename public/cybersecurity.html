@@ -1,65 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity Services | Codynex</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cybersecurity Services | Codynex</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <!-- Logo -->
+
+        <div class="flex items-center">
+
+            <div class="flex items-center gap-3">
+
+                <button
+                    onclick="toggleMenu()"
+                    class="menu-toggle hidden text-xl text-[#C85A3F] md:hidden"
+                    aria-label="Toggle menu"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-      <div class="nav-right">
-        <ul class="nav-items">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <a href="login.html" class="auth-btn">Login</a>
-          <a href="signup.html" class="auth-btn signup">Signup</a>
+
         </div>
-      </div>
+
+
+        <!-- Navigation -->
+
+        <div
+            id="navRight"
+            class="nav-right absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <ul class="flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="services.html"
+                            class="font-semibold text-[#C85A3F]"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <a
+                        href="login.html"
+                        class="px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Cybersecurity Solutions</h1>
-    <p>Protect your digital assets and infrastructure from modern threats.</p>
-  </section>
+</header>
 
-  <main class="content">
-    <h2>Why Choose Our Cybersecurity Services?</h2>
-    <p>We safeguard your systems with modern security frameworks, vulnerability scans, and 24/7 monitoring services.</p>
 
-    <h3>What We Offer</h3>
-    <ul>
-      <li><strong>Threat Monitoring:</strong> Real-time monitoring and alerting for intrusions or malware.</li>
-      <li><strong>Penetration Testing:</strong> Simulate attacks to find vulnerabilities before hackers do.</li>
-      <li><strong>Data Encryption:</strong> Keep sensitive data secure with strong encryption methods.</li>
-      <li><strong>Compliance Support:</strong> Help with GDPR, HIPAA, and ISO27001 readiness.</li>
-    </ul>
 
-    <h3>Tech & Tools</h3>
-    <ul>
-      <li>Firewall, SIEM, OWASP, Nessus</li>
-      <li>Cloud Security (AWS/GCP/Azure)</li>
-      <li>VPN, 2FA, Password Managers</li>
-    </ul>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <a class="btn" href="contact.html">Secure Your Business Now</a>
-  </main>
+<section class="border-b border-[#DDD8CF] bg-[#EFE6DD]">
 
-  <footer>
-    <p>&copy; 2025 Codynex. All rights reserved.</p>
-  </footer>
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
 
-  <script src="script.js"></script>
+        <div class="max-w-3xl">
+
+            <div class="mb-5 flex items-center gap-3">
+
+                <span class="h-[2px] w-10 bg-[#C85A3F]"></span>
+
+                <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#77716A]">
+                    Digital Security
+                </span>
+
+            </div>
+
+
+            <h1 class="text-4xl font-bold leading-tight tracking-[-0.05em] text-[#2F2A26] sm:text-5xl lg:text-6xl">
+
+                Cybersecurity
+                <span class="text-[#C85A3F]">
+                    Solutions
+                </span>
+
+            </h1>
+
+
+            <p class="mt-6 max-w-2xl text-base leading-8 text-[#68645F] sm:text-lg">
+                Protect your digital assets, applications and infrastructure
+                from modern security threats with reliable security solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+<section class="bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <!-- Intro -->
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+            <div class="lg:col-span-5">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Security First
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Why choose our cybersecurity services?
+                </h2>
+
+            </div>
+
+
+            <div class="lg:col-span-7">
+
+                <p class="text-base leading-8 text-[#77716A]">
+                    We help businesses strengthen their digital security through
+                    modern security practices, vulnerability assessments and
+                    proactive protection strategies.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Services -->
+
+        <div class="mt-16">
+
+            <div class="mb-8">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    What we offer
+                </span>
+
+                <h3 class="mt-3 text-2xl font-bold text-[#2F2A26]">
+                    Security solutions built for modern businesses.
+                </h3>
+
+            </div>
+
+
+            <div class="grid border-l border-t border-[#D9D4CC] sm:grid-cols-2">
+
+
+                <!-- Threat Monitoring -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-eye text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Threat Monitoring
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Real-time monitoring and alerting to identify suspicious
+                        activity, intrusions and potential malware threats.
+                    </p>
+
+                </div>
+
+
+                <!-- Penetration Testing -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-bug-slash text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Penetration Testing
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Simulate controlled attacks to discover vulnerabilities
+                        before they can be exploited by real attackers.
+                    </p>
+
+                </div>
+
+
+                <!-- Data Encryption -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-lock text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Data Encryption
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Protect sensitive information with strong encryption
+                        and secure data handling practices.
+                    </p>
+
+                </div>
+
+
+                <!-- Compliance -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            04
+                        </span>
+
+                        <i class="fa-solid fa-shield-halved text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Compliance Support
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Support your security and compliance goals with
+                        structured security practices and assessments.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TECHNOLOGY
+========================================================= -->
+
+<section class="bg-[#F7F5F0] border-y border-[#DDD8CF]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+            <div class="lg:col-span-5">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Technology
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Tools & Security Stack
+                </h2>
+
+                <p class="mt-5 max-w-md text-sm leading-8 text-[#77716A]">
+                    Modern tools and security practices help create a stronger
+                    foundation for your digital infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-7">
+
+                <div class="grid gap-4 sm:grid-cols-2">
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-fire-flame-curved text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Firewall & SIEM
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Network protection and centralized security monitoring.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-cloud text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Cloud Security
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Security practices for AWS, GCP and Azure environments.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-user-shield text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Identity & Access
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Secure authentication, 2FA and access management.
+                        </p>
+
+                    </div>
+
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-code text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            OWASP Security
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Application security practices based on modern standards.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="bg-[#EFE6DD]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Protect Your Business
+                </span>
+
+                <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.04em] text-[#2F2A26] sm:text-5xl">
+                    Build a safer digital future.
+                </h2>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+            >
+
+                Secure Your Business
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
+        </div>
+
+
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navRight");
+
+    if (nav) {
+        nav.classList.toggle("hidden");
+    }
+}
+</script>
+
 </body>
 </html>

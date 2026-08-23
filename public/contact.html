@@ -1,64 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact - Codynex</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-<style>
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block !important;
-    }
-}
-</style>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <style>
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <div class="nav-left">
+
+            <div class="logo flex items-center gap-3">
+
+                <div
+                    class="menu-toggle hidden cursor-pointer text-xl text-[#C85A3F] md:hidden"
+                    onclick="toggleMenu()"
+                >
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <a href="index.html" class="flex items-center gap-3">
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-            <div class="nav-right">
-                <ul class="nav-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+        </div>
+
+
+        <div
+            class="nav-right absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <ul class="nav-items flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a href="index.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="careers.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]">
+                            Careers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                            class="font-semibold text-[#C85A3F]">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
-                <div class="auth-buttons">
-                <a href="login.html" class="auth-btn login-btn">Login</a>
-                <a href="signup.html" class="auth-btn signup-btn signup">Signup</a>
-                <button class="logout-btn" style="display: none;">Logout</button>
+
+
+                <div class="auth-buttons flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <a
+                        href="login.html"
+                        class="auth-btn login-btn px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="auth-btn signup-btn signup rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+                    <button
+                        class="logout-btn hidden rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                    >
+                        Logout
+                    </button>
+
                 </div>
 
             </div>
-        </nav>
-    </header>
 
-    <section class="content">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label>Name:</label>
-            <input type="text" name="name" required>
+        </div>
 
-            <label>Email:</label>
-            <input type="email" name="email" required>
+    </nav>
 
-            <label>Message:</label>
-            <textarea name="message" rows="5" required></textarea>
+</header>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 Codynex. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<main>
+
+<section class="border-b border-[#DDD8CF] bg-[#F7F5F0]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+
+        <div class="grid gap-14 lg:grid-cols-12 lg:gap-20">
+
+
+            <!-- LEFT CONTENT -->
+
+            <div
+                class="lg:col-span-5"
+                data-aos="fade-up"
+            >
+
+                <div class="flex items-center gap-3">
+
+                    <span class="h-[2px] w-10 bg-[#C85A3F]"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#77716A]">
+                        Get in touch
+                    </span>
+
+                </div>
+
+
+                <h1 class="mt-5 text-5xl font-bold leading-[1.05] tracking-[-0.05em] text-[#2F2A26] sm:text-6xl">
+                    Let's talk about your
+                    <span class="text-[#C85A3F]">next idea.</span>
+                </h1>
+
+
+                <p class="mt-6 max-w-md text-base leading-8 text-[#77716A]">
+                    Have a project in mind, a question, or just want to
+                    say hello? Send us a message and we'll get back to you.
+                </p>
+
+
+                <div class="mt-10 space-y-6">
+
+                    <div class="flex items-start gap-4">
+
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white text-[#C85A3F] shadow-sm">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-[0.15em] text-[#A39C94]">
+                                Email
+                            </p>
+
+                            <p class="mt-1 text-sm font-medium text-[#3F3934]">
+                                contact@codynex.com
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex items-start gap-4">
+
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white text-[#C85A3F] shadow-sm">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-[0.15em] text-[#A39C94]">
+                                Response time
+                            </p>
+
+                            <p class="mt-1 text-sm font-medium text-[#3F3934]">
+                                Usually within 24 hours
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <div
+                class="lg:col-span-7"
+                data-aos="fade-left"
+            >
+
+                <div class="rounded-2xl border border-[#DDD8CF] bg-white p-7 shadow-sm sm:p-10">
+
+                    <div class="mb-8">
+
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                            Send a message
+                        </span>
+
+                        <h2 class="mt-3 text-3xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                            Tell us what you need.
+                        </h2>
+
+                    </div>
+
+
+                    <form id="contact-form" class="space-y-6">
+
+
+                        <!-- NAME -->
+
+                        <div>
+
+                            <label
+                                for="name"
+                                class="mb-2 block text-sm font-semibold text-[#3F3934]"
+                            >
+                                Name
+                            </label>
+
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                required
+                                placeholder="Your name"
+                                class="w-full rounded-lg border border-[#D9D4CC] bg-[#FDFCFA] px-4 py-3 text-sm text-[#2F2A26] outline-none transition placeholder:text-[#A39C94] focus:border-[#C85A3F] focus:ring-2 focus:ring-[#C85A3F]/10"
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div>
+
+                            <label
+                                for="email"
+                                class="mb-2 block text-sm font-semibold text-[#3F3934]"
+                            >
+                                Email
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="you@example.com"
+                                class="w-full rounded-lg border border-[#D9D4CC] bg-[#FDFCFA] px-4 py-3 text-sm text-[#2F2A26] outline-none transition placeholder:text-[#A39C94] focus:border-[#C85A3F] focus:ring-2 focus:ring-[#C85A3F]/10"
+                            >
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div>
+
+                            <label
+                                for="message"
+                                class="mb-2 block text-sm font-semibold text-[#3F3934]"
+                            >
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                                placeholder="Tell us about your project..."
+                                class="w-full resize-none rounded-lg border border-[#D9D4CC] bg-[#FDFCFA] px-4 py-3 text-sm text-[#2F2A26] outline-none transition placeholder:text-[#A39C94] focus:border-[#C85A3F] focus:ring-2 focus:ring-[#C85A3F]/10"
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+                        >
+
+                            Send Message
+
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BOTTOM CTA
+========================================================= -->
+
+<section class="bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+
+        <div class="rounded-2xl bg-[#EFE6DD] px-7 py-10 sm:px-10">
+
+            <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+
+                <div>
+
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                        Codynex
+                    </p>
+
+                    <h2 class="mt-2 text-2xl font-bold tracking-tight text-[#2F2A26]">
+                        Ready to build something meaningful?
+                    </h2>
+
+                </div>
+
+                <a
+                    href="services.html"
+                    class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#B34D35]"
+                >
+                    Explore Services
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
+        </div>
+
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
+
 </body>
 </html>

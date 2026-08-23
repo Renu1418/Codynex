@@ -1,0 +1,26 @@
+{
+  "name": "codynex",
+  "version": "1.0.0",
+  "description": "Codynex is a full-stack web application developed to demonstrate modern web development skills including authentication, database integration, and API development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./public/index.css -o ./public/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renu1418/Codynex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Renu1418/Codynex/issues"
+  },
+  "homepage": "https://github.com/Renu1418/Codynex#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,62 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cloud Integration | Codynex</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Integration | Codynex</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-left">
-                <div class="logo"><div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div> Codynex</div>
+
+<body class="bg-[#F7F5F0] text-[#2F2A26] antialiased">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="sticky top-0 z-50 border-b border-[#DDD8CF] bg-[#F7F5F0]/95 backdrop-blur-md">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+        <!-- Logo -->
+
+        <div class="flex items-center">
+
+            <div class="flex items-center gap-3">
+
+                <button
+                    onclick="toggleMenu()"
+                    class="text-xl text-[#C85A3F] md:hidden"
+                    aria-label="Toggle menu"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a
+                    href="index.html"
+                    class="flex items-center gap-3"
+                >
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C85A3F] text-sm font-bold text-white">
+                        C
+                    </span>
+
+                    <span class="text-xl font-bold tracking-[-0.03em]">
+                        Codynex
+                    </span>
+
+                </a>
+
             </div>
-      <div class="nav-right">
-        <ul class="nav-items">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <a href="login.html" class="auth-btn">Login</a>
-          <a href="signup.html" class="auth-btn signup">Signup</a>
+
         </div>
-      </div>
+
+
+        <!-- Navigation -->
+
+        <div
+            id="navRight"
+            class="absolute left-0 top-full hidden w-full border-b border-[#DDD8CF] bg-[#F7F5F0] px-6 py-7 md:static md:flex md:w-auto md:items-center md:border-0 md:bg-transparent md:p-0"
+        >
+
+            <div class="flex flex-col gap-7 md:flex-row md:items-center md:gap-10">
+
+                <ul class="flex flex-col gap-5 text-sm font-medium md:flex-row md:gap-8">
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="services.html"
+                            class="font-semibold text-[#C85A3F]"
+                        >
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-[#68645F] transition hover:text-[#C85A3F]"
+                        >
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="flex items-center gap-3 border-t border-[#DDD8CF] pt-5 md:border-t-0 md:pt-0">
+
+                    <a
+                        href="login.html"
+                        class="px-3 py-2 text-sm font-medium text-[#55514D] transition hover:text-[#C85A3F]"
+                    >
+                        Login
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="rounded-lg bg-[#C85A3F] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#B34D35]"
+                    >
+                        Signup
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Cloud Integration Services</h1>
-    <p>Reliable, secure cloud services to power your modern business operations.</p>
-  </section>
+</header>
 
-  <main class="content">
-    <h2>Our Cloud Offerings</h2>
-    <p>We empower enterprises to migrate, deploy, and scale their infrastructure on the cloud with ease.</p>
 
-    <h3>Solutions We Offer</h3>
-    <ul>
-      <li>Cloud migration & modernization</li>
-      <li>Serverless architecture & containerization (Docker, Kubernetes)</li>
-      <li>CI/CD pipelines and DevOps services</li>
-      <li>Auto-scaling, backups, disaster recovery</li>
-    </ul>
 
-    <h3>Tech Stack</h3>
-    <ul>
-      <li>AWS, Microsoft Azure, Google Cloud</li>
-      <li>Terraform, GitHub Actions, Jenkins</li>
-    </ul>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <a class="btn" href="contact.html">Get Started with Cloud</a>
-  </main>
+<section class="border-b border-[#DDD8CF] bg-[#EFE6DD]">
 
-  <footer>
-    <p>&copy; 2025 Codynex. All rights reserved.</p>
-  </footer>
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+
+        <div class="max-w-3xl">
+
+            <div class="mb-5 flex items-center gap-3">
+
+                <span class="h-[2px] w-10 bg-[#C85A3F]"></span>
+
+                <span class="text-xs font-bold uppercase tracking-[0.22em] text-[#77716A]">
+                    Cloud & Infrastructure
+                </span>
+
+            </div>
+
+
+            <h1 class="text-4xl font-bold leading-tight tracking-[-0.05em] text-[#2F2A26] sm:text-5xl lg:text-6xl">
+
+                Cloud Integration
+                <span class="text-[#C85A3F]">
+                    Services
+                </span>
+
+            </h1>
+
+
+            <p class="mt-6 max-w-2xl text-base leading-8 text-[#68645F] sm:text-lg">
+                Reliable, secure and scalable cloud solutions designed to
+                power modern business operations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+<section class="bg-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <!-- INTRO -->
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+            <div class="lg:col-span-5">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Cloud Strategy
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Our Cloud Offerings
+                </h2>
+
+            </div>
+
+
+            <div class="lg:col-span-7">
+
+                <p class="text-base leading-8 text-[#77716A]">
+                    We help businesses migrate, deploy and scale their
+                    infrastructure in the cloud while maintaining reliability,
+                    security and performance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SOLUTIONS -->
+
+        <div class="mt-16">
+
+            <div class="mb-8">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Solutions We Offer
+                </span>
+
+                <h3 class="mt-3 text-2xl font-bold text-[#2F2A26]">
+                    Infrastructure designed to scale with your business.
+                </h3>
+
+            </div>
+
+
+            <div class="grid border-l border-t border-[#D9D4CC] sm:grid-cols-2">
+
+
+                <!-- CLOUD MIGRATION -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-cloud-arrow-up text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Cloud Migration
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Move existing applications and infrastructure to
+                        modern cloud environments with a structured migration plan.
+                    </p>
+
+                </div>
+
+
+                <!-- SERVERLESS -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-server text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Serverless & Containers
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Build flexible applications using serverless
+                        architectures, Docker and containerized workloads.
+                    </p>
+
+                </div>
+
+
+                <!-- CI/CD -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-code-branch text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        CI/CD & DevOps
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Automate development and deployment workflows with
+                        reliable CI/CD pipelines and DevOps practices.
+                    </p>
+
+                </div>
+
+
+                <!-- BACKUP -->
+
+                <div class="border-b border-r border-[#D9D4CC] bg-[#F7F5F0] p-8 transition hover:bg-[#FFF9F5]">
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-sm font-bold text-[#A39C94]">
+                            04
+                        </span>
+
+                        <i class="fa-solid fa-database text-lg text-[#C85A3F]"></i>
+
+                    </div>
+
+                    <h4 class="mt-12 text-xl font-bold text-[#2F2A26]">
+                        Backup & Recovery
+                    </h4>
+
+                    <p class="mt-3 text-sm leading-7 text-[#77716A]">
+                        Improve business continuity with automated backups,
+                        disaster recovery and scalable infrastructure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TECH STACK
+========================================================= -->
+
+<section class="border-y border-[#DDD8CF] bg-[#F7F5F0]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="grid gap-12 lg:grid-cols-12">
+
+            <div class="lg:col-span-5">
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Technology
+                </span>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-[-0.04em] text-[#2F2A26]">
+                    Cloud Technology Stack
+                </h2>
+
+                <p class="mt-5 max-w-md text-sm leading-8 text-[#77716A]">
+                    We use modern cloud platforms and automation tools to
+                    build reliable and scalable infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-7">
+
+                <div class="grid gap-4 sm:grid-cols-2">
+
+
+                    <!-- AWS -->
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-brands fa-aws text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Amazon Web Services
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Scalable cloud infrastructure and application services.
+                        </p>
+
+                    </div>
+
+
+                    <!-- AZURE -->
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-cloud text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Microsoft Azure
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Enterprise-ready cloud infrastructure and services.
+                        </p>
+
+                    </div>
+
+
+                    <!-- GOOGLE CLOUD -->
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-brands fa-google text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            Google Cloud
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Flexible infrastructure for modern applications and data.
+                        </p>
+
+                    </div>
+
+
+                    <!-- DEVOPS -->
+
+                    <div class="rounded-xl border border-[#DDD8CF] bg-white p-6">
+
+                        <i class="fa-solid fa-gears text-xl text-[#C85A3F]"></i>
+
+                        <h3 class="mt-4 font-bold text-[#2F2A26]">
+                            DevOps & Automation
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#77716A]">
+                            Terraform, GitHub Actions and Jenkins for automated workflows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="bg-[#EFE6DD]">
+
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
+            <div>
+
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C85A3F]">
+                    Scale With Confidence
+                </span>
+
+                <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.04em] text-[#2F2A26] sm:text-5xl">
+                    Take your business to the cloud.
+                </h2>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="inline-flex w-fit items-center gap-3 rounded-lg bg-[#C85A3F] px-7 py-4 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#B34D35]"
+            >
+
+                Get Started
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-[#DDD8CF] bg-[#F7F5F0] text-[#77716A]">
+
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-7 sm:flex-row sm:items-center lg:px-8">
+
+        <div class="flex items-center gap-3">
+
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C85A3F] text-xs font-bold text-white">
+                C
+            </span>
+
+            <span class="text-sm font-bold text-[#2F2A26]">
+                Codynex
+            </span>
+
+        </div>
+
+
+        <p class="text-xs sm:text-sm">
+            &copy; 2025 Codynex. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("navRight");
+
+    if (nav) {
+        nav.classList.toggle("hidden");
+    }
+
+}
+
+</script>
+
 </body>
 </html>
