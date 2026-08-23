@@ -1,6 +1,6 @@
 console.log("Website loaded successfully");
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://codynex.onrender.com";
 
 
 /* =========================================================
