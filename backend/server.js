@@ -20,8 +20,9 @@ connectDB();
 
 // CORS Configuration
 app.use(cors({
-  origin: '*',
+  origin: 'https://codynex-frontend.onrender.com',
   methods: ['GET', 'POST'],
+  credentials: true
 }));
 
 // Middleware
